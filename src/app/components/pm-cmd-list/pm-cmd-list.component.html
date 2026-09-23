@@ -1,1 +1,25 @@
-<p>pm-cmd-list works!</p>
+<!--div style="display:flex;flex-direction:row;">
+    <div *ngFor="let command of commandList">
+        <input type="text" 
+            matInput placeholder={{showDirectivePlaceHolder(directive)}} 
+            id="userInput"
+            [(ngModel)]="directive.value" 
+            style="min-height:30px;text-align:center;" />
+    </div>
+</div-->
+
+<div style="display:flex;flex-direction: row;gap:10px">
+    <div style="width:100px">
+        <mat-select>
+            <mat-option value="volvo">Volvo</mat-option>
+            <mat-option value="saab">Saab</mat-option>
+            <mat-option value="mercedes">Mercedes</mat-option>
+            <mat-option value="audi">Audi</mat-option>
+        </mat-select>
+    </div>
+
+    <app-pm-button 
+        [title]="'Execute'" , 
+        [execute]="executeAction">
+    </app-pm-button>
+</div>
